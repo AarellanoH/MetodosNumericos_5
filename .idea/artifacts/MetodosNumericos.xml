@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="MetodosNumericos">
+    <output-path>$PROJECT_DIR$/output</output-path>
+    <root id="archive" name="MetodosNumericos.jar">
+      <element id="module-output" name="5_Metodos" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Se encarga de los elementos gráficos de la ventana princial que engloba a todos los métodos.-->
+<!--Autores:
+   Autor.
+-->
+
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane minHeight="-Infinity" minWidth="-Infinity" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Metodos.MainController">
+  <tabs>
+      <Tab text="Horner">
+          <content>
+              <fx:include source="Horner/Horner.fxml" />
+           </content>
+      </Tab>
+      <Tab text="Newton-Raphson">
+          <content>
+              <fx:include source="NewtonRaphson/NewtonRaphson.fxml"/>
+          </content>
+      </Tab>
+      <Tab text="Operaciones Matriciales">
+          <content>
+              <fx:include source="OperacionesMatriciales/OperacionesMatriciales.fxml" />
+          </content>
+      </Tab>
+      <Tab text="Gauss Sustitución Regresiva">
+          <content>
+              <fx:include source="Gauss/Gauss.fxml"/>
+          </content>
+      </Tab>
+      <Tab text="Newton-Raphson Multivariable">
+          <content>
+              <fx:include source="NewtonRaphsonMV/NewtonRaphson_MV.fxml"/>
+          </content>
+      </Tab>
+  </tabs>
+</TabPane>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Se encarga de los elementos gráficos de la ventana de Newton Raphson-->
+<!--Autores:
+   Autor.
+-->
+
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Metodos.NewtonRaphson.NewtonRaphsonController">
+   <children>
+      <VBox spacing="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="10.0">
+               <children>
+                  <Label minWidth="-Infinity" text="Newton Raphson" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label text="Instrucciones&#10;Ingresa tu ecuación, así como los datos de x Inicial, las iteraciones máximas permitidas y el error máximo aceptable que deseas usar para el cálculo. &#10;Si no llenas algún campo, se tomará su valor default (el texto semitransparente de cada campo).&#10;Una vez que hayas llenado los datos requeridos, haz click en Calcular Raíz." />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Label text="f(x)=" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="110.0" spacing="10.0">
+                     <children>
+                        <TextField fx:id="tfx5" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="85.0" promptText="0" />
+                        <Label text="x5" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Label text="+" />
+                        <TextField fx:id="tfx4" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="85.0" promptText="0" />
+                        <Label text="x4" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="140.0" spacing="10.0">
+                     <children>
+                        <Label text="+" />
+                        <TextField fx:id="tfx3" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="85.0" promptText="0" />
+                        <Label text="x3" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="140.0" spacing="10.0">
+                     <children>
+                        <Label text="+" />
+                        <TextField fx:id="tfx2" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="85.0" promptText="0" />
+                        <Label text="x2" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="140.0" spacing="10.0">
+                     <children>
+                        <Label text="+" />
+                        <TextField fx:id="tfx1" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="85.0" promptText="0" />
+                        <Label text="x" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="140.0" spacing="10.0">
+                     <children>
+                        <Label text="+" />
+                        <TextField fx:id="tfx0" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="85.0" promptText="0" />
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Label text="x Inicial:" />
+                  <TextField fx:id="tfXInicial" alignment="CENTER" prefWidth="85.0" promptText="1" />
+                  <Label text="Iteraciones máximas:" />
+                  <TextField fx:id="tfIteracionesMaximas" alignment="CENTER" prefHeight="25.0" prefWidth="52.0" promptText="20" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Error máximo:" />
+                  <TextField fx:id="tfPorcentajeErrorMaximo" alignment="CENTER_RIGHT" prefWidth="85.0" promptText=".05" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\%">
+                     <HBox.margin>
+                        <Insets left="-8.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Button mnemonicParsing="false" onAction="#btnExecute" text="Calcular Raíz" />
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Text fx:id="txtConclusiones" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="JUSTIFY" />
+                     </children>
+                     <padding>
+                        <Insets left="100.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </HBox>
+            <VBox fx:id="vbIteraciones" alignment="CENTER_LEFT" fillWidth="false">
+               <children>
+                  <GridPane fx:id="gridIteraciones">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                  </GridPane>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets bottom="30.0" left="30.0" right="30.0" />
+   </padding>
+</AnchorPane>
